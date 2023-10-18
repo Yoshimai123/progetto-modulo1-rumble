@@ -5,6 +5,7 @@
     --font-size-m: 1.6rem;
     --font-size-l: 2rem;
     --font-size-xl: 3rem;
+    --text-color: #0a1b2a;
     --gap-s: 1rem;
     --gap-m: calc(var(--gap-s) * 2);
     --gap-l: calc(var(--gap-s) * 3);
@@ -38,7 +39,6 @@ body>header {
 }
 body>aside {
     grid-area: as;
-    background-color: green;
 }   
 body>nav{
     grid-area: na;
@@ -96,7 +96,90 @@ header .logo-section {
     width: 10rem;
     height: 5rem;
 }
+button {
+    cursor: pointer;
+}
+/* Aside */
+aside {
+    overflow-x: scroll;
+}
+aside::-webkit-scrollbar {
+    display: none;
+}
+.aside-nav-bar {
+    padding-top: var(--gap-m);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aside-nav-bar a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+.nav-item {
+    padding: var(--gap-s);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-item img {
+    width: var(--font-size-l); 
+}
+.nav-item span {
+    margin-top: 5px; 
+    text-align: center; 
+}
+aside hr {
+    color: lightgray;
+    margin-inline: 5px;
+}
 
+.featured {
+    padding: var(--gap-s);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.featured h4 {
+    padding-bottom: var(--gap-s);
+}
+.featured li {
+    list-style-type: none;
+}
+.featured img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: .5rem;
+}
+.theme-selection h4 {
+    padding-top: var(--gap-s);
+}
+.theme-selection {
+    display: grid;
+    place-content: center;
+    gap: var(--font-size-s);
+}
+.theme-selection span {
+    font-size: 1rem;
+}
+.theme-selection button {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 5px; 
+    border: none;
+    background-color: transparent;
+
+}
+.theme-selection img {
+    width: 20px;
+    margin-top: var(--gap-s);
+}
+.theme-selection span {
+    width: 30px;
+}
 /*--------------------------------------------------------*/
 /* Media Query */
 /*--------------------------------------------------------*/
@@ -110,6 +193,9 @@ header .logo-section {
         "na"
         "ma"    
          ;
+    }
+    aside {
+        display: none;
     }
 }
 /* Tablet S */
