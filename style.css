@@ -71,7 +71,7 @@ header .logo-section {
     border: 1px solid lightgray;
     border-right: none;
     border-radius: 20px;
-    width: 40vw;
+    width: 35vw;
     padding-left: 10px;
 }
 .search-bar>button {
@@ -112,6 +112,19 @@ header .logo-section {
          ;
     }
 }
+/* Tablet S */
+@media (max-width: 700px) {
+    .search-bar>input {
+        display: none;
+    }
+    .search-bar>button {
+        position: static;
+    }
+    .search-bar {
+        margin-left: auto;
+        padding-top: .5rem;
+    }
+}
 /* Phone */
 @media (max-width: 480px) {
     body {
@@ -121,5 +134,22 @@ header .logo-section {
         "na"
         "ma"    
          ;
+    }
+    .search-bar>input {
+        display: none;
+    }
+    header .logo-section {
+        gap: 1rem;
+        padding-left: var(--gap-s);
+    }
+    .search-bar>button {
+        position: static;
+    }
+    .search-bar {
+        margin-left: auto;
+        padding-top: .5rem;
+    }
+    .login-section .sign-out-btn {
+        margin: var(--gap-s);
     }
 }
