@@ -1,0 +1,125 @@
+/* Basics */
+:root {
+    font-size: 62.5%; /* font size 10px */
+    --font-size-s: 1.3rem;
+    --font-size-m: 1.6rem;
+    --font-size-l: 2rem;
+    --font-size-xl: 3rem;
+    --gap-s: 1rem;
+    --gap-m: calc(var(--gap-s) * 2);
+    --gap-l: calc(var(--gap-s) * 3);
+    --gap-xl: calc(var(--gap-s) * 5);
+    --max-block-width: 800px;
+    --font-standard: 'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-standard);
+}
+img{
+    width: 100%;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "he he"
+    "as na"
+    "as ma"
+    ;
+    grid-template-columns: 63px 1fr ;
+    grid-template-rows: 69px 60px 1fr;
+}
+body>header {
+    grid-area: he;
+    border: solid 1px lightgrey;
+}
+body>aside {
+    grid-area: as;
+    background-color: green;
+}   
+body>nav{
+    grid-area: na;
+    background-color: yellow;
+}
+body>main {
+    background-color: blue;
+    grid-area: ma;
+}
+/* Header */
+body>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body>header>section {
+    display: flex;
+}
+header .logo-section {
+    height: 4rem;
+    align-items: center;
+    gap: 2rem;
+    padding-left: var(--gap-l);
+}
+.search-bar {
+    position: relative;
+}
+.search-bar>input {
+    height: 35px;
+    border: 1px solid lightgray;
+    border-right: none;
+    border-radius: 20px;
+    width: 40vw;
+    padding-left: 10px;
+}
+.search-bar>button {
+    height: 35px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 20px;
+    right: 0;
+    position: absolute;
+    padding-right: 10px;
+}
+.login-section>button {
+    border: none;
+    background-color: transparent;
+    font-size: var(--font-size-m);
+}
+.login-section .sign-out-btn {
+    margin: var(--gap-l);
+    border: 2px solid #85c742;
+    border-radius: 30px;
+    width: 10rem;
+    height: 5rem;
+}
+
+/*--------------------------------------------------------*/
+/* Media Query */
+/*--------------------------------------------------------*/
+
+/* Tablet */
+@media (max-width: 960px){
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "he"
+        "na"
+        "ma"    
+         ;
+    }
+}
+/* Phone */
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "he"
+        "na"
+        "ma"    
+         ;
+    }
+}
