@@ -33,8 +33,10 @@ body {
     ;
     grid-template-columns: 63px 1fr ;
     grid-template-rows: 69px 60px 1fr;
+    background-color: #e9ebee;
 }
 body>header {
+    background-color: #fff;
     grid-area: he;
     border: solid 1px lightgrey;
 }
@@ -42,8 +44,8 @@ body>aside {
     grid-area: as;
 }   
 body>nav{
+    background-color: #fff;
     grid-area: na;
-    background-color: yellow;
 }
 body>main {
     background-color: #e9ebee;
@@ -102,6 +104,11 @@ button {
 }
 /* Aside */
 aside {
+    overflow-x: hidden;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}
+aside:hover {
     overflow-x: scroll;
 }
 aside::-webkit-scrollbar {
@@ -284,7 +291,39 @@ main {
     font-size: 2rem;
 }
 .main-container {
+    border-top: 1px solid lightgray;
     overflow: hidden;
+}
+
+/* NAV */
+nav {
+    overflow: hidden;
+}
+.homepage-nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-m);
+    flex: 0 0 auto;
+}
+.homepage-nav button {
+    flex: 0 0 auto;
+    border: none;
+    border-radius: 20px;
+    padding: .5rem;
+}
+.homepage-nav button:nth-child(4) {
+    background-color: #f23160;
+    color: white;
+    width: 6rem;
+}
+.homepage-nav button:nth-child(7) {
+    background-color: blue;
+}
+.homepage-nav button:nth-child(11) {
+    background-color: red;
 }
 /*--------------------------------------------------------*/
 /* Media Query */
